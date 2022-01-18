@@ -64,8 +64,22 @@
     font-size: 17px;
 }
 
+.ms_notifications-info p {
+    margin: 0;
+}
 
+.ms_notifications-info .ms_info {
+    font-size: 10px;
+    font-weight: 500;
+}
 
+.ms_notifications-info .ms_info-b {
+    font-size: 7px;
+    color: #888;
+    text-decoration: underline;
+}
+ 
+/* filter-contacts */
 .ms_filter-contacts {
     height: 30px;
 }
