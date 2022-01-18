@@ -56,8 +56,11 @@
 
                         <!-- contacts' list -->
                         <div class="ms_contacts">
-                            <div class="ms_single-contact" v-for="contact in contacts">
-                                <img 
+                            <div class="ms_single-contact"
+                                v-for="(contact, i) in contacts"
+                                :class="{'ms_contact-color-even' : i % 2 === 0}"
+                                >
+                                <img class="ms-3"
                                     :src=" 'img/avatar' + contact.avatar + '.jpg' " 
                                     :alt="contact.name + ' image' "
                                 >
