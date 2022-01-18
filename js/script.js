@@ -95,6 +95,17 @@ new Vue({
     methods: {
         chooseChat: function(i) {
             this.currentCounterIndex = i;
+        },
+        messageType: function(i) {
+            
+            let messageClass = [];
+
+            if (i.status === 'sent') {
+                message.push('ms_color');
+            } else {
+                console.log('BENE');
+            }
+            return messageClass;
         }
     }
 });

@@ -100,7 +100,7 @@
                             <div class="ms_messages-container h-100 px-5">
                                 <div v-for="message in contacts[currentCounterIndex].messages">
                                     <span
-                                    :class=""
+                                    :class="messageType(message)"
                                     >{{message.text}}</span>
                                 </div>
                             </div>

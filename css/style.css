@@ -171,7 +171,9 @@
 }
 
 /* text/messages space */
-
+.ms_color {
+    color: red;
+}
 
 /* main message input zone */
 .ms_main .ms_message-input {
