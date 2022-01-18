@@ -22,12 +22,30 @@
                     <!-- sidebar -->
                     <div class="ms_sidebar">
 
-                        <div class="ms_my-user"></div>
+                        <!-- my-user -->
+                        <div class="ms_my-user d-flex justify-content-between my-auto">
+                            <div class="ms_left my-auto ms-2">
+                                <img src="img/avatar_io.jpg" alt="avatar_io">
+                                <span>Nome Utente</span>
+                            </div>
 
-                        <div class="ms_notifications"></div>
+                            <div class="ms_right my-auto me-2">
+                                <i class="fas fa-circle-notch"></i>
+                                <i class="fas fa-comment-alt"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <!-- / my-user -->
+
+                        <!-- notifications -->
+                        <div class="ms_notifications">
+                            
+                        </div>
+                        <!-- / notifications -->
 
                         <div class="ms_filter-contacts"></div>
 
+                        <!-- contacts' list -->
                         <div class="ms_contacts">
                             <div class="ms_single-contact" v-for="contact in contacts">
                                 <img 
@@ -38,10 +56,8 @@
                                     {{contact.name}}
                                 </span>
                             </div>
-
-
-
                         </div>
+                        <!-- / contacts' list -->
 
 
 

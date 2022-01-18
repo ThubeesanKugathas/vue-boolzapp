@@ -24,7 +24,7 @@
     height: 100%;
 }
 
-/* SIDEBAR */
+/* SIDEBAR -------------------------------------------------------------------*/
 .ms_sidebar {
     width: 250px;
     height: 100%;
@@ -34,6 +34,26 @@
 .ms_notifications {
     height: 50px;
 }
+
+/* my user */
+.ms_my-user img {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.ms_my-user span {
+    font-size: 12px;
+}
+
+.ms_my-user .ms_right i {
+    margin: 0 5px;
+    color: #ccc;
+}
+
+/* notifcations */
+
+
+
 
 .ms_filter-contacts {
     height: 30px;
@@ -51,7 +71,7 @@
     height: 50px;
 }
 
-/* MAIN */
+/* MAIN --------------------------------------------------------------------- */
 .ms_main {
     width: calc(100% - 250px);
     background-color: blue;
