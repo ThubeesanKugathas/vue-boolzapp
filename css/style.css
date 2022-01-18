@@ -82,8 +82,24 @@
 /* filter-contacts */
 .ms_filter-contacts {
     height: 30px;
+    background-color: #f8f8f8;
 }
 
+.ms_filter-contacts i,
+.ms_filter-contacts input {
+    font-size: 10px;
+}
+
+.ms_filter-contacts input {
+    border: none;
+    width: 200px;
+}
+
+.ms_filter-contacts i {
+    color: #aaa;
+}
+
+/* contacts */
 .ms_contacts {
     height: calc(100% - 130px);
 }
