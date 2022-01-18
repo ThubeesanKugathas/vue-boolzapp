@@ -171,8 +171,30 @@
 }
 
 /* text/messages space */
-.ms_color {
-    color: red;
+.ms_text-space p {
+    margin: 0;
+}
+
+.ms_text-space .ms_single-message {
+    border-radius: 10px;
+}
+
+.ms_text-space .ms_single-message p:first-child {
+    font-size: 12px;
+}
+.ms_text-space .ms_date {
+    font-size: 8px;
+    color: #888;
+}
+
+.ms_text-space .ms_sent {
+    background-color: #d4f9b9;
+    align-self: end;
+}
+
+.ms_text-space .ms_received {
+    background-color: #fff;
+    align-self: start;
 }
 
 /* main message input zone */

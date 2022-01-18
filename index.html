@@ -97,11 +97,13 @@
 
                         <!-- text space -->
                         <div class="ms_text-space flex-grow-1">
-                            <div class="ms_messages-container h-100 px-5">
-                                <div v-for="message in contacts[currentCounterIndex].messages">
-                                    <span
+                            <div class="ms_messages-container h-100 px-5 pt-3 d-flex flex-column">
+                                <div v-for="message in contacts[currentCounterIndex].messages"
+                                    class="ms_single-message my-2 p-2" 
                                     :class="messageType(message)"
-                                    >{{message.text}}</span>
+                                    >
+                                    <p>{{message.text}}</p>
+                                    <p class="ms_date">{{message.date}}</p>
                                 </div>
                             </div>
                         </div>

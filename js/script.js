@@ -97,13 +97,11 @@ new Vue({
             this.currentCounterIndex = i;
         },
         messageType: function(i) {
-            
             let messageClass = [];
-
             if (i.status === 'sent') {
-                message.push('ms_color');
+                messageClass.push('ms_sent');
             } else {
-                console.log('BENE');
+                messageClass.push('ms_received');
             }
             return messageClass;
         }
