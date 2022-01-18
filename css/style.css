@@ -1,3 +1,10 @@
+/* COMMONS  */
+.ms_my-user img,
+.ms_main .ms_main-header img {
+    height: 30px;
+    border-radius: 50%;
+}
+
 /* background styling */
 .ms_grey-bg {
     background-color: #dbdbd1;
@@ -15,19 +22,9 @@
     width: 800px;
 }
 
-/* app styling */
-#app {
-    height: 100%;
-}
-
-.ms_container {
-    height: 100%;
-}
-
 /* SIDEBAR -------------------------------------------------------------------*/
 .ms_sidebar {
     width: 250px;
-    height: 100%;
 }
 
 .ms_my-user,
@@ -40,10 +37,6 @@
     background-color: #eee;
 }
 
-.ms_my-user img {
-    height: 30px;
-    border-radius: 50%;
-}
 
 .ms_my-user span {
     font-size: 12px;
@@ -132,7 +125,6 @@
 .ms_main {
     width: calc(100% - 250px);
     background-image: url(../img/mine.jpg);
-    height: 100%;
 }
 
 .ms_main .ms_main-header,
@@ -143,11 +135,6 @@
 /* main header */
 .ms_main .ms_main-header {
     background-color: #eee;
-}
-
-.ms_main .ms_main-header img {
-    height: 30px;
-    border-radius: 50%;
 }
 
 .ms_main .ms_main-header p {
