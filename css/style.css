@@ -36,6 +36,10 @@
 }
 
 /* my user */
+.ms_my-user {
+    background-color: #eee;
+}
+
 .ms_my-user img {
     height: 30px;
     border-radius: 50%;
@@ -47,7 +51,7 @@
 
 .ms_my-user .ms_right i {
     margin: 0 5px;
-    color: #ccc;
+    color: #bbb;
     font-size: 15px;
 }
 
@@ -68,12 +72,12 @@
     margin: 0;
 }
 
-.ms_notifications-info .ms_info {
+.ms_notifications .ms_notifications-info .ms_info {
     font-size: 10px;
     font-weight: 500;
 }
 
-.ms_notifications-info .ms_info-b {
+.ms_notifications .ms_notifications-info .ms_info-b {
     font-size: 7px;
     color: #888;
     text-decoration: underline;
@@ -127,6 +131,46 @@
 /* MAIN --------------------------------------------------------------------- */
 .ms_main {
     width: calc(100% - 250px);
-    background-color: blue;
+    background-image: url(../img/mine.jpg);
     height: 100%;
+}
+
+.ms_main .ms_main-header,
+.ms_main .ms_message-input {
+    height: 50px;
+}
+
+/* main header */
+.ms_main .ms_main-header {
+    background-color: #eee;
+}
+
+.ms_main .ms_main-header img {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.ms_main .ms_main-header p {
+    margin: 0;
+}
+
+.ms_main .ms_main-header .ms_info {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.ms_main .ms_main-header .ms_info-b {
+    font-size: 7px;
+    color: #888;
+}
+
+.ms_main .ms_right i {
+    margin: 0 5px;
+    color: #bbb;
+    font-size: 15px;
+}
+
+/* main message input zone */
+.ms_main .ms_message-input {
+    background-color: #f3eee9;
 }
