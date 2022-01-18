@@ -1,6 +1,7 @@
 new Vue({
     el: '#app',
     data: {
+        // index per riferimento al metodo per switchare chat
         currentCounterIndex: 0,
         contacts: [
             // primo contatto
@@ -96,9 +97,10 @@ new Vue({
         chooseChat: function(i) {
             this.currentCounterIndex = i;
         },
-        messageType: function(i) {
+        // metodo per definire la classe del messaggio a seconda dello status
+        messageType: function(message) {
             let messageClass = [];
-            if (i.status === 'sent') {
+            if (message.status === 'sent') {
                 messageClass.push('ms_sent');
             } else {
                 messageClass.push('ms_received');

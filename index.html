@@ -12,24 +12,24 @@
 </head>
 <body>
     <!-- background styling -->
-    <div class="ms_grey-bg position-relative">
+    <div class="position-relative ms_grey-bg">
         <div class="ms_green-bg"></div>
 
         <!-- main app-container -->
         <div class="position-absolute top-50 start-50 translate-middle ms_white-bg">
             <div id="app">
-                <div class="ms_container d-flex">
+                <div class="d-flex ms_container">
                     <!-- sidebar -->
                     <div class="ms_sidebar">
 
                         <!-- my-user -->
-                        <div class="ms_my-user d-flex justify-content-between my-auto">
-                            <div class="ms_left my-auto ms-2">
+                        <div class="d-flex justify-content-between my-auto ms_my-user">
+                            <div class="my-auto ms-2 ms_left">
                                 <img src="img/avatar_io.jpg" alt="avatar_io">
                                 <span>Nome Utente</span>
                             </div>
 
-                            <div class="ms_right my-auto me-2">
+                            <div class="my-auto me-2 ms_right">
                                 <i class="fas fa-circle-notch"></i>
                                 <i class="fas fa-comment-alt"></i>
                                 <i class="fas fa-ellipsis-v"></i>
@@ -38,9 +38,9 @@
                         <!-- / my-user -->
 
                         <!-- notifications -->
-                        <div class="ms_notifications d-flex">
-                            <i class="fas fa-bell-slash my-auto ms_bell ms-2"></i>
-                            <div class="ms_notifications-info my-auto ms-2">
+                        <div class="d-flex ms_notifications">
+                            <i class="fas fa-bell-slash my-auto ms-2 ms_bell"></i>
+                            <div class="my-auto ms-2 ms_notifications-info">
                                 <p class="ms_info">Ricevi notifiche di nuovi messaggi</p>
                                 <p class="ms_info-b">Attiva notifiche desktop</p>
                             </div>
@@ -48,7 +48,7 @@
                         <!-- / notifications -->
 
                         <!-- contacts filter -->
-                        <div class="ms_filter-contacts ps-3">
+                        <div class="ps-3 ms_filter-contacts">
                             <i class="fas fa-search"></i>
                             <input placeholder="Cerca o inizia una nuova chat">
                         </div>
@@ -75,19 +75,19 @@
                     <!-- / sidebar -->
 
                     <!-- main -->
-                    <div class="ms_main d-flex flex-column">
+                    <div class="d-flex flex-column ms_main">
                         <!-- main header -->
-                        <div class="ms_main-header d-flex justify-content-between">
+                        <div class="d-flex justify-content-between ms_main-header">
                             
-                            <div class="ms_left my-auto ms-2 d-flex">
+                            <div class="my-auto ms-2 d-flex ms_left">
                                 <img :src=" 'img/avatar' + contacts[currentCounterIndex].avatar + '.jpg'" alt="avatar_1">
-                                <div class="ms_notifications-info my-auto ms-2">
+                                <div class="my-auto ms-2 ms_notifications-info">
                                     <p class="ms_info">{{contacts[currentCounterIndex].name}}</p>
                                     <p class="ms_info-b">Ultimo accesso oggi alle</p>
                                 </div>
                             </div>
 
-                            <div class="ms_right my-auto me-2">
+                            <div class="my-auto me-2 ms_right">
                                 <i class="fas fa-search"></i>
                                 <i class="fas fa-paperclip"></i>
                                 <i class="fas fa-ellipsis-v"></i>
@@ -96,10 +96,10 @@
                         <!-- / main header -->
 
                         <!-- text space -->
-                        <div class="ms_text-space flex-grow-1">
-                            <div class="ms_messages-container h-100 px-5 pt-3 d-flex flex-column">
+                        <div class="flex-grow-1 ms_text-space">
+                            <div class="h-100 px-5 pt-3 d-flex flex-column ms_messages-container">
                                 <div v-for="message in contacts[currentCounterIndex].messages"
-                                    class="ms_single-message my-2 p-2" 
+                                    class="my-2 p-2 ms_single-message" 
                                     :class="messageType(message)"
                                     >
                                     <p>{{message.text}}</p>
@@ -110,7 +110,7 @@
                         <!-- / text space -->
 
                         <!-- message input zone -->
-                        <div class="ms_message-input d-flex py-2 px-3">
+                        <div class="d-flex py-2 px-3 ms_message-input">
                             <i class="far fa-smile my-auto"></i>
                             <input class="flex-grow-1 mx-3" placeholder="Scrivi un messaggio">
                             <i class="fas fa-microphone my-auto"></i>
@@ -118,7 +118,6 @@
                         <!-- / message input zone -->
                     </div>
                     <!-- / main -->
-
                 </div>
             </div>
         </div>
