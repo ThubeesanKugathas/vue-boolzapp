@@ -174,3 +174,15 @@
 .ms_main .ms_message-input {
     background-color: #f3eee9;
 }
+
+.ms_main .ms_message-input i {
+    color: #777;
+}
+
+.ms_main .ms_message-input input {
+    border: none;
+}
+
+.ms_main .ms_message-input input::placeholder {
+    font-size: 12px;
+}
