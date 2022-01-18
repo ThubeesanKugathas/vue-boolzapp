@@ -48,10 +48,21 @@
 .ms_my-user .ms_right i {
     margin: 0 5px;
     color: #ccc;
+    font-size: 15px;
 }
 
 /* notifcations */
+.ms_notifications {
+    background-color: #8edafc;
+}
 
+.ms_notifications .ms_bell {
+    color: #8edafc;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 7px 4px;
+    font-size: 17px;
+}
 
 
 
