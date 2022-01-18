@@ -97,7 +97,13 @@
 
                         <!-- text space -->
                         <div class="ms_text-space flex-grow-1">
-
+                            <div class="ms_messages-container h-100 px-5">
+                                <div v-for="message in contacts[currentCounterIndex].messages">
+                                    <span
+                                    :class=""
+                                    >{{message.text}}</span>
+                                </div>
+                            </div>
                         </div>
                         <!-- / text space -->
 
