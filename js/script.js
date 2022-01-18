@@ -1,6 +1,7 @@
 new Vue({
     el: '#app',
     data: {
+        currentCounterIndex: 0,
         contacts: [
             // primo contatto
             {
@@ -92,6 +93,8 @@ new Vue({
         ]
     },
     methods: {
-
+        chooseChat: function(i) {
+            this.currentCounterIndex = i;
+        }
     }
 });

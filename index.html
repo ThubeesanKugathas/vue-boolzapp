@@ -59,6 +59,7 @@
                             <div class="ms_single-contact"
                                 v-for="(contact, i) in contacts"
                                 :class="{'ms_contact-color-even' : i % 2 === 0}"
+                                @click="chooseChat(i)"
                                 >
                                 <img class="ms-3"
                                     :src=" 'img/avatar' + contact.avatar + '.jpg' " 
@@ -79,9 +80,9 @@
                         <div class="ms_main-header d-flex justify-content-between">
                             
                             <div class="ms_left my-auto ms-2 d-flex">
-                                <img src="img/avatar_1.jpg" alt="avatar_1">
+                                <img :src=" 'img/avatar' + contacts[currentCounterIndex].avatar + '.jpg'" alt="avatar_1">
                                 <div class="ms_notifications-info my-auto ms-2">
-                                    <p class="ms_info">Michele</p>
+                                    <p class="ms_info">{{contacts[currentCounterIndex].name}}</p>
                                     <p class="ms_info-b">Ultimo accesso oggi alle</p>
                                 </div>
                             </div>
