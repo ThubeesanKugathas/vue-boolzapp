@@ -1,0 +1,59 @@
+/* background styling */
+.ms_grey-bg {
+    background-color: #dbdbd1;
+    height: 100vh;
+}
+
+.ms_green-bg {
+    background-color: #019688;
+    height: 100px;
+}
+
+.ms_white-bg {
+    background-color: #fff;
+    height: calc(100vh - 40px);
+    width: 800px;
+}
+
+/* app styling */
+#app {
+    height: 100%;
+}
+
+.ms_container {
+    height: 100%;
+}
+
+/* SIDEBAR */
+.ms_sidebar {
+    width: 250px;
+    height: 100%;
+}
+
+.ms_my-user,
+.ms_notifications {
+    height: 50px;
+}
+
+.ms_filter-contacts {
+    height: 30px;
+}
+
+.ms_contacts {
+    height: calc(100% - 130px);
+}
+
+.ms_single-contact {
+    height: 50px;
+}
+
+.ms_single-contact img {
+    height: 50px;
+}
+
+/* MAIN */
+.ms_main {
+    width: calc(100% - 250px);
+    background-color: blue;
+    height: 100%;
+}

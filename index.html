@@ -11,11 +11,54 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
-    
-    <div id="app">
+    <!-- background styling -->
+    <div class="ms_grey-bg position-relative">
+        <div class="ms_green-bg"></div>
+
+        <!-- main app-container -->
+        <div class="position-absolute top-50 start-50 translate-middle ms_white-bg">
+            <div id="app">
+                <div class="ms_container d-flex">
+                    <!-- sidebar -->
+                    <div class="ms_sidebar">
+
+                        <div class="ms_my-user"></div>
+
+                        <div class="ms_notifications"></div>
+
+                        <div class="ms_filter-contacts"></div>
+
+                        <div class="ms_contacts">
+                            <div class="ms_single-contact" v-for="contact in contacts">
+                                <img 
+                                    :src=" 'img/avatar' + contact.avatar + '.jpg' " 
+                                    :alt="contact.name + ' image' "
+                                >
+                                <span>
+                                    {{contact.name}}
+                                </span>
+                            </div>
 
 
 
+                        </div>
+
+
+
+
+                    </div>
+                    <!-- / sidebar -->
+
+                    <!-- main -->
+                    <div class="ms_main">
+
+                    </div>
+                    <!-- / main -->
+
+                </div>
+            </div>
+        </div>
+        <!-- / main app-container -->
 
     </div>
 
