@@ -96,7 +96,13 @@ new Vue({
             date: '01/01/2022 00:00:00',
             text: '',
             status: 'sent'
-        }
+        },
+        replyInput: {
+            date: '01/01/2022 00:00:00',
+            text: 'okay',
+            status: 'received'
+        },
+        replyTime: 0
     },
     methods: {
         chooseChat: function(i) {
@@ -112,9 +118,16 @@ new Vue({
                     text: '',
                     status: 'sent'
                 }
+                // risposta automatica al message mandato
+                let message = this
+                this.replyTime = setTimeout(function() {
+                    message.automaticReply(i); //si riferisce sempre all'index ''currentIndex...''
+                }, 1000)
             }
+        },
+        automaticReply: function(i) {
+            this.contacts[i].messages.push(this.replyInput);
         }
-
     }
 });
 
