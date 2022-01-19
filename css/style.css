@@ -162,6 +162,11 @@
     margin: 0;
 }
 
+.ms_text-space .ms_messages-container {
+    max-height: 445px;
+    overflow-y: auto;
+}
+
 .ms_text-space .ms_single-message {
     border-radius: 10px;
 }

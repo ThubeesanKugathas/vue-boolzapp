@@ -103,7 +103,8 @@ new Vue({
             status: 'received'
         },
         replyTime: 0,
-        filterInput: ''
+        filterInput: '',
+        active: false,
     },
     methods: {
         chooseChat: function(i) {
