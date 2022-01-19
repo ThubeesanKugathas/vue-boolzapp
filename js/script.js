@@ -131,19 +131,14 @@ new Vue({
         automaticReply: function(i) {
             this.contacts[i].messages.push(this.replyInput);
         },
-        // filteredList: function() {
-        //     if(this.filterInput) {
-        //         return this.contacts.filter((contact) => {
-        //             contact.name.startWith(this.filterInput);
-        //         });
-        //     } else {
-        //         return this.contacts;
-        //     }
-        // }
-        openDropdown: function() {
-            this.active = !this.active;
-        }
     },
+    computed: {
+        filteredList: function() {
+            return this.contacts.filter((contact) => {
+                return contact.name.toLowerCase().match(this.filterInput)
+            })
+        }
+    }
 });
 
 /*

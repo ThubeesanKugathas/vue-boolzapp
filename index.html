@@ -60,7 +60,7 @@
                         <!-- contacts' list -->
                         <div class="ms_contacts">
                             <div class="ms_single-contact"
-                                v-for="(contact, i) in contacts"
+                                v-for="(contact, i) in filteredList"
                                 :class="{'ms_contact-color-even' : i % 2 === 0}"
                                 @click="chooseChat(i)"
                                 >
@@ -107,7 +107,7 @@
                                     >
                                     <p>{{message.text}}</p>
                                     <p class="ms_date">{{message.date}}</p>
-                                    <div @click="openDropdown">X</div>
+                                    <div>X</div>
                                     <div class="ms_dropdown-content" :class="{'d-block' : active === true}">
                                         <p>uno</p>
                                         <p>due</p>
