@@ -107,6 +107,11 @@
                                     >
                                     <p>{{message.text}}</p>
                                     <p class="ms_date">{{message.date}}</p>
+                                    <div @click="openDropdown">X</div>
+                                    <div class="ms_dropdown-content" :class="{'d-block' : active === true}">
+                                        <p>uno</p>
+                                        <p>due</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

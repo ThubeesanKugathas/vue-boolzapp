@@ -189,6 +189,10 @@
     align-self: start;
 }
 
+.ms_text-space .ms_dropdown-content {
+    display: none;
+}
+
 /* main message input zone */
 .ms_main .ms_message-input {
     background-color: #f3eee9;

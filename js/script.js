@@ -105,6 +105,7 @@ new Vue({
         replyTime: 0,
         filterInput: '',
         active: false,
+        messageIndex: 0,
     },
     methods: {
         chooseChat: function(i) {
@@ -139,6 +140,9 @@ new Vue({
         //         return this.contacts;
         //     }
         // }
+        openDropdown: function() {
+            this.active = !this.active;
+        }
     },
 });
 
