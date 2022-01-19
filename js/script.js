@@ -91,21 +91,35 @@ new Vue({
                     }
                 ],
             },
-        ]
+        ],
+        temporaryInput: {
+            date: '01/01/2022 00:00:00',
+            text: '',
+            status: 'sent'
+        }
     },
     methods: {
         chooseChat: function(i) {
             this.currentCounterIndex = i;
         },
-        // metodo per definire la classe del messaggio a seconda dello status
-        messageType: function(message) {
-            let messageClass = [];
-            if (message.status === 'sent') {
-                messageClass.push('ms_sent');
-            } else {
-                messageClass.push('ms_received');
+        sendMessage: function(i) {
+            // if per controllare che non partino messaggi vuoti
+            if (this.temporaryInput.text.length > 0) {
+                this.contacts[i].messages.push(this.temporaryInput);
+                // reset input space
+                this.temporaryInput = {
+                    date: '01/01/2022 00:00:00',
+                    text: '',
+                    status: 'sent'
+                }
             }
-            return messageClass;
         }
+
     }
 });
+
+/*
+Milestone 3
+2- Risposta dall’interlocutore: ad ogni inserimento di un messaggio,
+ l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+*/

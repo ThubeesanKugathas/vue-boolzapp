@@ -100,7 +100,7 @@
                             <div class="h-100 px-5 pt-3 d-flex flex-column ms_messages-container">
                                 <div v-for="message in contacts[currentCounterIndex].messages"
                                     class="my-2 p-2 ms_single-message" 
-                                    :class="messageType(message)"
+                                    :class="message.status === 'sent' ? 'ms_sent' : 'ms_received'"
                                     >
                                     <p>{{message.text}}</p>
                                     <p class="ms_date">{{message.date}}</p>
@@ -112,7 +112,11 @@
                         <!-- message input zone -->
                         <div class="d-flex py-2 px-3 ms_message-input">
                             <i class="far fa-smile my-auto"></i>
-                            <input class="flex-grow-1 mx-3" placeholder="Scrivi un messaggio">
+                            <input class="flex-grow-1 mx-3"
+                                placeholder="Scrivi un messaggio"
+                                v-model="temporaryInput.text"
+                                @keyup.enter="sendMessage(currentCounterIndex)"
+                                >
                             <i class="fas fa-microphone my-auto"></i>
                         </div>
                         <!-- / message input zone -->
