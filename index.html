@@ -59,18 +59,20 @@
 
                         <!-- contacts' list -->
                         <div class="ms_contacts">
-                            <div class="ms_single-contact"
-                                v-for="(contact, i) in filteredList"
+                            <div v-for="(contact, i) in contacts"
                                 :class="{'ms_contact-color-even' : i % 2 === 0}"
                                 @click="chooseChat(i)"
                                 >
-                                <img class="ms-3"
-                                    :src=" 'img/avatar' + contact.avatar + '.jpg' " 
-                                    :alt="contact.name + ' image' "
-                                >
-                                <span>
-                                    {{contact.name}}
-                                </span>
+                                <div class="ms_single-contact" 
+                                    v-if="contact.name.toLowerCase().includes(filterInput)">
+                                    <img class="ms-3"
+                                        :src=" 'img/avatar' + contact.avatar + '.jpg' " 
+                                        :alt="contact.name + ' image' "
+                                    >
+                                    <span>
+                                        {{contact.name}}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <!-- / contacts' list -->

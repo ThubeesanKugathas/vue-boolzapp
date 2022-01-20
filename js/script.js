@@ -105,7 +105,6 @@ new Vue({
         replyTime: 0,
         filterInput: '',
         active: false,
-        messageIndex: 0,
     },
     methods: {
         chooseChat: function(i) {
@@ -132,13 +131,6 @@ new Vue({
             this.contacts[i].messages.push(this.replyInput);
         },
     },
-    computed: {
-        filteredList: function() {
-            return this.contacts.filter((contact) => {
-                return contact.name.toLowerCase().match(this.filterInput)
-            })
-        }
-    }
 });
 
 /*
