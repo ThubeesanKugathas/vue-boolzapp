@@ -122,17 +122,17 @@ new Vue({
         automaticReply: function(i) {
             this.contacts[i].messages.push({
                 date: this.getDate(),
-                text: 'okay',
+                text: 'okki',
                 status: 'received'
             });
         },
         openDropdown: function(index) {
+            // come il currentCounterIndex, prende in riferimento un index per aprire il singolo dropdown
             this.messageIndex = index;
             this.active = !this.active;
         },
         deleteMessage: function(messageIndex, currentCounterIndex) {
             this.contacts[currentCounterIndex].messages.splice(messageIndex, 1);
-
             // evitare che il prossimo menù si apra automaticamente
             this.active = false;
         },
@@ -143,7 +143,7 @@ new Vue({
         getLastOnline: function(i) {
             // prendo l'ultimo index di riferimento nella variabile e la inserisco nel return
             let lastText = this.contacts[i].messages.length - 1;
-
+            // in caso di 0 messaggi nella chat, automaticamente l'ultimo accesso cambia in "recentemente"
             if (this.contacts[i].messages.length < 1) {
                 return 'recentemente';
             } else {

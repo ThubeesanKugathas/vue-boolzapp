@@ -19,6 +19,7 @@
         <div class="position-absolute top-50 start-50 translate-middle ms_white-bg">
             <div class="h-100" id="app">
                 <div class="d-flex h-100 ms_container">
+
                     <!-- sidebar -->
                     <div class="h-100 ms_sidebar">
 
@@ -50,10 +51,7 @@
                         <!-- contacts filter -->
                         <div class="ps-3 ms_filter-contacts">
                             <i class="fas fa-search"></i>
-                            <input 
-                                placeholder="Cerca o inizia una nuova chat"
-                                v-model="filterInput"
-                                >
+                            <input placeholder="Cerca o inizia una nuova chat" v-model="filterInput">
                         </div>
                         <!-- / contacts filter -->
 
@@ -61,14 +59,12 @@
                         <div class="ms_contacts">
                             <div v-for="(contact, i) in contacts"
                                 :class="{'ms_contact-color-even' : i % 2 === 0}"
-                                @click="chooseChat(i)"
-                                >
+                                @click="chooseChat(i)">
                                 <div class="ms_single-contact" 
                                     v-if="contact.name.toLowerCase().includes(filterInput)">
                                     <img class="ms-3"
                                         :src=" 'img/avatar' + contact.avatar + '.jpg' " 
-                                        :alt="contact.name + ' image' "
-                                    >
+                                        :alt="contact.name + ' image' ">
                                     <span>
                                         {{contact.name}}
                                     </span>
@@ -76,11 +72,13 @@
                             </div>
                         </div>
                         <!-- / contacts' list -->
+
                     </div>
                     <!-- / sidebar -->
 
                     <!-- main -->
                     <div class="d-flex flex-column h-100 ms_main">
+
                         <!-- main header -->
                         <div class="d-flex justify-content-between ms_main-header">
                             
@@ -137,12 +135,15 @@
                             <i class="fas fa-microphone my-auto"></i>
                         </div>
                         <!-- / message input zone -->
+
                     </div>
                     <!-- / main -->
+
                 </div>
             </div>
         </div>
         <!-- / main app-container -->
+        
     </div>
 
     <script src="js/script.js"></script>

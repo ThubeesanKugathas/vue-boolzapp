@@ -154,7 +154,7 @@
     font-size: 15px;
 }
 
-/* text/messages space */
+/* text/messages space ---------------------------*/
 .ms_text-space p {
     margin: 0;
 }
@@ -176,6 +176,7 @@
     color: #888;
 }
 
+/* sent-received effect------------------ */
 .ms_text-space .ms_sent {
     background-color: #d4f9b9;
     align-self: end;
@@ -186,6 +187,7 @@
     align-self: start;
 }
 
+/* dropdown content ed effetti--------------------------- */
 .ms_text-space .ms_single-message .ms_icon-dropdown {
     opacity: 0;
 }
@@ -206,7 +208,7 @@
     font-size: 10px;
 }
 
-/* main message input zone */
+/* main message input zone --------------------*/
 .ms_main .ms_message-input {
     background-color: #f3eee9;
 }
