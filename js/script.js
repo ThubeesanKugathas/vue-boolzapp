@@ -143,8 +143,13 @@ new Vue({
         getLastOnline: function(i) {
             // prendo l'ultimo index di riferimento nella variabile e la inserisco nel return
             let lastText = this.contacts[i].messages.length - 1;
-            // prende in riferimento sempre l'ultimo messaggio ricevuto/mandato della pagina
-            return this.contacts[i].messages[lastText].date;
+
+            if (this.contacts[i].messages.length < 1) {
+                return 'recentemente';
+            } else {
+                // prende in riferimento sempre l'ultimo messaggio ricevuto/mandato della pagina
+                return this.contacts[i].messages[lastText].date;
+            }
         }
     },
 });
