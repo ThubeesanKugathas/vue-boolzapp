@@ -96,6 +96,7 @@ new Vue({
         replyTime: 0,
         filterInput: '',
         active: false,
+        messageIndex: 0,
     },
     methods: {
         chooseChat: function(i) {
@@ -125,7 +126,8 @@ new Vue({
                 status: 'received'
             });
         },
-        openDropdown: function() {
+        openDropdown: function(index) {
+            this.messageIndex = index;
             this.active = !this.active;
         },
         getDate: function() {
