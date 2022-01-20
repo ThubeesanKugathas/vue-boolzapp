@@ -105,15 +105,14 @@
                             <div class="h-100 px-5 pt-3 d-flex flex-column ms_messages-container">
                                 <div v-for="(message, messageInd) in contacts[currentCounterIndex].messages"
                                     class="d-flex justify-content-between position-relative my-2 p-2 ms_single-message" 
-                                    :class="message.status === 'sent' ? 'ms_sent' : 'ms_received'"
-                                    >
+                                    :class="message.status === 'sent' ? 'ms_sent' : 'ms_received'">
                                     <div class="ms_left">
                                         <p>{{message.text}}</p>
                                         <p class="ms_date">{{message.date}}</p>
                                     </div>
 
                                     <div class="ms-3 ms_right">
-                                        <i class="fas fa-chevron-down"
+                                        <i class="fas fa-chevron-down ms_icon-dropdown"
                                             @click="openDropdown(messageInd)"></i>
                                         <div class="position-absolute top-60 start-50 p-2 ms_dropdown-content" 
                                             :class="{'d-block' : active === true}"

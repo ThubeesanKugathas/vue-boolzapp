@@ -186,6 +186,14 @@
     align-self: start;
 }
 
+.ms_text-space .ms_single-message .ms_icon-dropdown {
+    opacity: 0;
+}
+
+.ms_text-space .ms_single-message:hover .ms_icon-dropdown {
+    opacity: 100%;
+}
+
 .ms_text-space .ms_dropdown-content {
     display: none;
     background-color: #fff;
