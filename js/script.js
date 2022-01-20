@@ -132,6 +132,9 @@ new Vue({
         },
         deleteMessage: function(messageIndex, currentCounterIndex) {
             this.contacts[currentCounterIndex].messages.splice(messageIndex, 1);
+
+            // evitare che il prossimo menù si apra automaticamente
+            this.active = false;
         },
         getDate: function() {
             // dayjs function
