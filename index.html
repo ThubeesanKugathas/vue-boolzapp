@@ -89,7 +89,7 @@
                                 <img :src=" 'img/avatar' + contacts[currentCounterIndex].avatar + '.jpg'" alt="avatar_1">
                                 <div class="my-auto ms-2 ms_notifications-info">
                                     <p class="ms_info">{{contacts[currentCounterIndex].name}}</p>
-                                    <p class="ms_info-b">Ultimo accesso oggi alle</p>
+                                    <p class="ms_info-b">Ultimo accesso oggi alle {{getLastOnline(currentCounterIndex)}}</p>
                                 </div>
                             </div>
 

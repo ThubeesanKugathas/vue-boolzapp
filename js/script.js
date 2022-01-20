@@ -127,6 +127,10 @@ new Vue({
         },
         getDate: function() {
             return dayjs().format('DD/MM/YYYY HH:mm:ss');
+        },
+        getLastOnline: function(i) {
+            let lastText = this.contacts[i].messages.length - 1;
+            return this.contacts[i].messages[lastText].date;
         }
     },
 });
