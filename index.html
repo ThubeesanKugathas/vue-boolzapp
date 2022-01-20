@@ -119,7 +119,7 @@
                                             :class="{'d-block' : active === true}"
                                             v-if="messageInd === messageIndex">
                                             <p>Message info</p>
-                                            <p>Delete message</p>
+                                            <p @click="deleteMessage(messageInd, currentCounterIndex)">Delete message</p>
                                         </div>
                                     </div>
                                 </div>

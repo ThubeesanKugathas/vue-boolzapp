@@ -130,6 +130,9 @@ new Vue({
             this.messageIndex = index;
             this.active = !this.active;
         },
+        deleteMessage: function(messageIndex, currentCounterIndex) {
+            this.contacts[currentCounterIndex].messages.splice(messageIndex, 1);
+        },
         getDate: function() {
             // dayjs function
             return dayjs().format('DD/MM/YYYY HH:mm:ss');
