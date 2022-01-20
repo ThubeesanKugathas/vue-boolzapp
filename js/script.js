@@ -126,23 +126,14 @@ new Vue({
             });
         },
         getDate: function() {
+            // dayjs function
             return dayjs().format('DD/MM/YYYY HH:mm:ss');
         },
         getLastOnline: function(i) {
+            // prendo l'ultimo index di riferimento nella variabile e la inserisco nel return
             let lastText = this.contacts[i].messages.length - 1;
+            // prende in riferimento sempre l'ultimo messaggio ricevuto/mandato della pagina
             return this.contacts[i].messages[lastText].date;
         }
     },
 });
-
-/*
-Milestone 4
-- Ricerca utenti: scrivendo qualcosa nell’input a sinistra,
- vengono visualizzati solo i contatti il cui nome contiene le lettere inserite
- (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
-
-Milestone 5 - opzionale
-1- Cancella messaggio: cliccando sul messaggio appare un menu
- a tendina che permette di cancellare il messaggio selezionato
-2- Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
-*/
