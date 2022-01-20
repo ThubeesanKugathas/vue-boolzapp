@@ -2,7 +2,6 @@ new Vue({
     el: '#app',
     data: {
         // index per riferimento al metodo per switchare chat
-        currentCounterIndex: 0,
         contacts: [
             // primo contatto
             {
@@ -92,16 +91,8 @@ new Vue({
                 ],
             },
         ],
-        temporaryInput: {
-            date: '01/01/2022 00:00:00',
-            text: '',
-            status: 'sent'
-        },
-        replyInput: {
-            date: '01/01/2022 00:00:00',
-            text: 'okay',
-            status: 'received'
-        },
+        temporaryInput: '',
+        currentCounterIndex: 0,
         replyTime: 0,
         filterInput: '',
         active: false,
@@ -112,14 +103,14 @@ new Vue({
         },
         sendMessage: function(i) {
             // if per controllare che non partino messaggi vuoti
-            if (this.temporaryInput.text.length > 0) {
-                this.contacts[i].messages.push(this.temporaryInput);
-                // reset input space
-                this.temporaryInput = {
-                    date: '01/01/2022 00:00:00',
-                    text: '',
+            if (this.temporaryInput.length > 0) {
+                this.contacts[i].messages.push({
+                    date: this.getDate(),
+                    text: this.temporaryInput,
                     status: 'sent'
-                }
+                });
+                // reset input space
+                this.temporaryInput = '';
                 // risposta automatica al message mandato
                 let message = this
                 this.replyTime = setTimeout(function() {
@@ -128,8 +119,15 @@ new Vue({
             }
         },
         automaticReply: function(i) {
-            this.contacts[i].messages.push(this.replyInput);
+            this.contacts[i].messages.push({
+                date: this.getDate(),
+                text: 'okay',
+                status: 'received'
+            });
         },
+        getDate: function() {
+            return dayjs().format('DD/MM/YYYY HH:mm:ss');
+        }
     },
 });
 
