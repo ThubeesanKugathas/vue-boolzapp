@@ -13,8 +13,7 @@
 </head>
 <body>
     <!-- background styling -->
-    <div class="position-relative ms_grey-bg">
-        <div class="ms_green-bg"></div>
+    <div class="position-relative ms_bg">
 
         <!-- main app-container -->
         <div class="position-absolute top-50 start-50 translate-middle ms_white-bg">
@@ -89,7 +88,7 @@
                                 <img :src=" 'img/avatar' + contacts[currentCounterIndex].avatar + '.jpg'" alt="avatar_1">
                                 <div class="my-auto ms-2 ms_notifications-info">
                                     <p class="ms_info">{{contacts[currentCounterIndex].name}}</p>
-                                    <p class="ms_info-b">Ultimo accesso oggi alle {{getLastOnline(currentCounterIndex)}}</p>
+                                    <p class="ms_info-b">Ultimo accesso {{getLastOnline(currentCounterIndex)}}</p>
                                 </div>
                             </div>
 
@@ -105,15 +104,22 @@
                         <div class="flex-grow-1 ms_text-space">
                             <div class="h-100 px-5 pt-3 d-flex flex-column ms_messages-container">
                                 <div v-for="message in contacts[currentCounterIndex].messages"
-                                    class="my-2 p-2 ms_single-message" 
+                                    class="d-flex justify-content-between position-relative my-2 p-2 ms_single-message" 
                                     :class="message.status === 'sent' ? 'ms_sent' : 'ms_received'"
                                     >
-                                    <p>{{message.text}}</p>
-                                    <p class="ms_date">{{message.date}}</p>
-                                    <div>X</div>
-                                    <div class="ms_dropdown-content" :class="{'d-block' : active === true}">
-                                        <p>uno</p>
-                                        <p>due</p>
+                                    <div class="ms_left">
+                                        <p>{{message.text}}</p>
+                                        <p class="ms_date">{{message.date}}</p>
+                                    </div>
+
+                                    <div class="ms-3 ms_right">
+                                        <i class="fas fa-chevron-down"
+                                            @click="openDropdown"></i>
+                                        <div class="position-absolute top-60 start-50 p-2 ms_dropdown-content" 
+                                            :class="{'d-block' : active === true}">
+                                            <p>Message info</p>
+                                            <p>Delete message</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

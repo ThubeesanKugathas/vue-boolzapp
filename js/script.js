@@ -125,6 +125,9 @@ new Vue({
                 status: 'received'
             });
         },
+        openDropdown: function() {
+            this.active = !this.active;
+        },
         getDate: function() {
             // dayjs function
             return dayjs().format('DD/MM/YYYY HH:mm:ss');
